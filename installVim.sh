@@ -2,14 +2,16 @@
 
 packageManager=("$(which apt-get)" "install" "-y")
 
-sudo ${packageManager[@]} vim vim-gtk gvim git
+sudo ${packageManager[@]} vim vim-gtk git
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-git clone https://github.com/willyrgf/vimfiles ~/ || exit
+rm -rf /tmp/vimfiles
 
-mv ~/gvimrc ~/.gvimrc || exit
-mv ~/vimrc ~/.vimrc || exit
+git clone https://github.com/willyrgf/vimfiles /tmp/vimfiles || exit
+
+mv -f /tmp/vimfiles/gvimrc ~/.gvimrc || exit
+mv -f /tmp/vimfiles/vimrc ~/.vimrc || exit
 
 vim +:BundleClean +q +q
 vim +:BundleInstall +q +q
