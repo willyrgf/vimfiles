@@ -32,7 +32,7 @@ set smartindent         " smart identation
 set number              " show line numbers
 set wim=longest,list    " file auto-completion
 set background=dark     " to follow most of the colorschemes I use
-set vb t_vb=            " convert bells to visual bells and do nothing as visual bell
+"set vb=t_vb            " convert bells to visual bells and do nothing as visual bell
 set t_Co=256            " 256 color terminals
 let mapleader=","     " use comma to start user-defined (in plugins) functions
 
@@ -66,6 +66,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'sjl/badwolf'
 Bundle 'tomasr/molokai'
 Bundle 'jpo/vim-railscasts-theme'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ervandew/supertab'
 " End Vundle
 "
 
