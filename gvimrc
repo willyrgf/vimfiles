@@ -14,3 +14,5 @@ function Maximize_Window()
 endfunction
 
 au GUIEnter * call Maximize_Window()
+"au GUIEnter * NERDTree /home/willy/Projetos
+

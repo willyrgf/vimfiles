@@ -68,8 +68,14 @@ Bundle 'tomasr/molokai'
 Bundle 'jpo/vim-railscasts-theme'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
+"Bundle 'wincent/Command-T'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-session'
 " End Vundle
 "
 
 " Atalho
 nnoremap <C-O> :CtrlPFunky<CR>
+
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'
