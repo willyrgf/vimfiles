@@ -73,6 +73,7 @@ Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 " End Vundle
 "
+colorscheme badwolf
 
 " Atalho
 nnoremap <C-O> :CtrlPFunky<CR>
