@@ -16,3 +16,6 @@ endfunction
 au GUIEnter * call Maximize_Window()
 "au GUIEnter * NERDTree /home/willy/Projetos
 
+map <silent> <S-Insert> "+p
+imap <silent> <S-Insert> <Esc>"+pa
+
