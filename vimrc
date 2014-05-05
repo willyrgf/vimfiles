@@ -13,7 +13,7 @@ map Y y$
 syntax on
 set hlsearch
 set tabstop=2           " tabs are displayed as 4 spaces
-set shiftwidth=1        " by default, when auto-identing, add 4 spaces (or 1 tabstop)
+set shiftwidth=2        " by default, when auto-identing, add 4 spaces (or 1 tabstop)
 set foldmethod=marker   " fold on markers
 set scrolloff=1         " always show one line around the cursor
 set laststatus=2        " always show the status bar (âcause I like to see the line and column, always)
