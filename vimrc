@@ -27,28 +27,28 @@ set history=500          " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 set incsearch           " do incremental searching
-set formatoptions=tcq   " wrap with textwidth, wrap comments, insert commend leader (twice), format comments
-set smartindent         " smart identation
-set number              " show line numbers
-set wim=longest,list    " file auto-completion
-set background=dark     " to follow most of the colorschemes I use
-"set vb=t_vb            " convert bells to visual bells and do nothing as visual bell
-set t_Co=256            " 256 color terminals
-let mapleader=","     " use comma to start user-defined (in plugins) functions
-
-"if has("autocmd")
-
-filetype plugin indent on
-" Numero de colunas maximo de cada texto
-autocmd FileType text setlocal textwidth=78
-
-" When editing a file, always jump to the last known cursor position.
-" Donât do it when the position is invalid or when inside an event handler
-" (happens when dropping a file on gvim).
-au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
+set formatoptions=tcq   " wrap with textwidth, wrap comments, insert commend leader (twice), format comments                                                                                                                                 
+set smartindent         " smart identation                                                                                                                                                                                                   
+set number              " show line numbers                                                                                                                                                                                                  
+set wim=longest,list    " file auto-completion                                                                                                                                                                                               
+set background=dark     " to follow most of the colorschemes I use                                                                                                                                                                           
+"set vb=t_vb            " convert bells to visual bells and do nothing as visual bell                                                                                                                                                        
+set t_Co=256            " 256 color terminals                                                                                                                                                                                                
+let mapleader=","     " use comma to start user-defined (in plugins) functions                                                                                                                                                               
+                                                                                                                                                                                                                                             
+"if has("autocmd")                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                             
+filetype plugin indent on                                                                                                                                                                                                                    
+" Numero de colunas maximo de cada texto                                                                                                                                                                                                     
+autocmd FileType text setlocal textwidth=78                                                                                                                                                                                                  
+                                                                                                                                                                                                                                             
+" When editing a file, always jump to the last known cursor position.                                                                                                                                                                        
+" Donât do it when the position is invalid or when inside an event handler                                                                                                                                                                   
+" (happens when dropping a file on gvim).                                                                                                                                                                                                    
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif                                                                                                                                                  
+                                                                                                                                                                                                                                             
+" Vundle                                                                                                                                                                                                                                     
+set rtp+=~/.vim/bundle/vundle/                                                                                                                                                                                                               
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -71,6 +71,7 @@ Bundle 'ervandew/supertab'
 "Bundle 'wincent/Command-T'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
+Bundle 'szw/vim-ctrlspace'
 " End Vundle
 "
 colorscheme badwolf
