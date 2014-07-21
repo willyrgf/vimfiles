@@ -10,7 +10,6 @@ rm -rf /tmp/vimfiles
 
 git clone https://github.com/willyrgf/vimfiles /tmp/vimfiles || exit
 
-mv -f /tmp/vimfiles/gvimrc ~/.gvimrc || exit
 mv -f /tmp/vimfiles/vimrc ~/.vimrc || exit
 
 vim +:BundleClean +q +q
