@@ -6,9 +6,9 @@ sudo ${packageManager[@]} vim vim-gtk git
 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-git clone https://github.com/willyrgf/vimfiles || exit
+git pull
 
-mv -f vimfiles/vimrc ~/.vimrc || exit
+mv -f vimrc ~/.vimrc || exit
 
 vim +:BundleClean +q +q
 vim +:BundleInstall +q +q
