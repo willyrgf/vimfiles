@@ -6,17 +6,15 @@ set nocompatible
 set encoding=utf-8
 " Apenas garante que o backspace consiga remover as identacoes
 set backspace=indent,eol,start
- " Don’t use Ex mode, use Q for formatting
+" Don’t use Ex mode, use Q for formatting
 map Q gq
 " Map Y to do the same (well, almost) as the D command
-map Y y$ 
-
+map Y y$
 "Se o terminal tiver mais de duas cores
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-endif 
-
+syntax on
+set hlsearch
+endif
 " Minhas configuracoes.
 " tamanho da tabulacao
 set tabstop=2
@@ -68,20 +66,17 @@ set t_Co=256
 " mapleader, padrao /
 let mapleader=","
 
-if has("autocmd") 
+if has("autocmd")
   " ativa as configuracoes vindas do arquivo de sintaxe
   filetype plugin indent on
-  
   " quando for texto textwidth=78
   autocmd FileType text setlocal textwidth=78
-  
   " omni-complete, detecta quais elementos fazem sentido na sintaxe
   au FileType python setlocal ofu=pythoncomplete#Complete
   au FileType javascript setlocal ofu=javascriptcomplete#CompleteJS
   set completeopt-=preview
-
 else
-	set autoindent
+  set autoindent
 endif " has("autocmd")
 
 " Mapeamento de abas
@@ -110,7 +105,63 @@ imap <M-0> <ESC>:tabn 10<CR>a
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" Plugins instalados
 Bundle 'gmarik/vundle'
+" color
 Bundle 'sjl/badwolf'
+Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
+"Bundle 'szw/vim-ctrlspace'
+"comentarios
+Bundle 'tpope/vim-commentary'
+" multi cursores
+Bundle 'terryma/vim-multiple-cursors'
+" barra airline na janela
+Bundle 'bling/vim-airline'
+" git
+Bundle 'tpope/vim-fugitive'
+" tabulacao automatica
+Bundle 'godlygeek/tabular'
+" fecha automaticamente ',",(,[,{
+Bundle 'jiangmiao/auto-pairs'
+" highlight de erros
+Bundle 'scrooloose/syntastic'
+" autocompleta estruturas
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
+" encontrar arquivos rapidamente
+Bundle 'kien/ctrlp.vim'
+" procura funcoes no fonte
+Bundle 'tacahiroy/ctrlp-funky'
 
+" Variaveis dos plugins
+let g:airline_powerline_fonts = 1 
+" o branch ficara no airline
+let g:airline_enable_branch = 1 
+" mostra os erros no airline
+let g:airline_enable_syntastic = 1 
+
+" Syntax color and color
+set background=dark
 colorscheme badwolf
+
+" Configuracoes para o gVim
+if has("gui_running")
+  set guioptions=aegit    " basically, all options, except the scrollbar, menu and toolbar
+"  set columns=         " number of columns (uses most of my screen, in this case)
+  set cursorline          " highlight the line with the cursor
+  set colorcolumn=+2      " put a marker at textwidth + 2
+  set linespace=1         " spread the lines a bit, adding a 1px line above all
+"  set gfn=monofur\ for\ Powerline\ 12
+"  set lines=54 
+"
+  " funcao usada para maximizar o gvim
+  function Maximize_Window()
+    silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+  endfunction
+
+  au GUIEnter * call Maximize_Window()
+
+  colorscheme solarized
+endif 
