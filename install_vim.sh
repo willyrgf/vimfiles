@@ -8,7 +8,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 git pull
 
-ln -s vimrc ~/.vimrc || exit
+ln -s $(pwd)/vimrc ~/.vimrc || exit
 
 vim +:BundleClean +q +q && vim +:BundleInstall +q +q
 
