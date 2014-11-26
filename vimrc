@@ -12,8 +12,8 @@ map Q gq
 map Y y$
 "Se o terminal tiver mais de duas cores
 if &t_Co > 2 || has("gui_running")
-syntax on
-set hlsearch
+  syntax on
+  set hlsearch
 endif
 " Minhas configuracoes.
 " tamanho da tabulacao
