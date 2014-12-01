@@ -68,6 +68,19 @@ set noswapfile
 " mapleader, padrao /
 let mapleader=","
 
+" backup
+set backup
+set backupdir=~/vimfiles/backup/
+let myvar = strftime("%y%m%d-%Hh%Mm%S")
+let myvar = "set backupext=_". myvar
+execute myvar
+
+" grava onde parou na ultima vez que abriu o arquivo
+autocmd BufReadPost *
+ \ if line("'\"") > 0 && line("'\"") <= line("$") |
+ \   exe "normal g`\"" |
+ \ endif
+
 if has("autocmd")
   " ativa as configuracoes vindas do arquivo de sintaxe
   filetype plugin indent on
