@@ -70,7 +70,7 @@ let mapleader=","
 
 " backup
 set backup
-set backupdir=~/vimfiles/backup/
+set backupdir=~/vim_bkp/
 let myvar = strftime("%y%m%d-%Hh%Mm%S")
 let myvar = "set backupext=_". myvar
 execute myvar
