@@ -160,7 +160,7 @@ let g:airline_enable_syntastic = 1
 " Syntax color and color
 set background=dark
 colorscheme badwolf
-"colorscheme solarized
+set cursorline          " highlight the line with the cursor
 
 " Configuracoes para o gVim
 if has("gui_running")
@@ -168,10 +168,9 @@ if has("gui_running")
   " desbailita visualbell de erro
   set vb t_vb=
 "  set columns=         " number of columns (uses most of my screen, in this case)
-  set cursorline          " highlight the line with the cursor
   set colorcolumn=+2      " put a marker at textwidth + 2
   set linespace=1         " spread the lines a bit, adding a 1px line above all
-"  set gfn=monofur\ for\ Powerline\ 12
+  set guifont=Monospace\ 12
 "  set lines=54 
 "
   " funcao usada para maximizar o gvim
