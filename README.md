@@ -1,4 +1,4 @@
 vimfiles
 ========
 
-Arquivos de configuração, plugin e colorscheme pessoais do VIM.
+Arquivo de configuração, plugins e colorscheme pessoais do VIM.
