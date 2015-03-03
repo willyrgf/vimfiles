@@ -153,11 +153,13 @@ Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'lervag/vim-latex'
 
 " Variaveis dos plugins
-let g:airline_powerline_fonts = 1 
-" o branch ficara no airline
-let g:airline_enable_branch = 1 
+let g:airline#extensions#powerline_fonts#enabled = 1 
+" o branch ficara no airline                                                                                                                           
+let g:airline#extensions#enable_branch#enabled = 1 
 " mostra os erros no airline
-let g:airline_enable_syntastic = 1 
+let g:airline#extensions#enable_syntastic#enabled = 1 
+" mostra as tabs
+let g:airline#extensions#tabline#enabled = 1 
 
 " Syntax color and color
 set background=dark
