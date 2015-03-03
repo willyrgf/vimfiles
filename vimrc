@@ -149,6 +149,8 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'kien/ctrlp.vim'
 " procura funcoes no fonte
 Bundle 'tacahiroy/ctrlp-funky'
+"Latex
+Bundle 'lervag/vim-latex'
 
 " Variaveis dos plugins
 let g:airline_powerline_fonts = 1 
