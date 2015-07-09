@@ -13,6 +13,8 @@ git pull
 # Cria o link simbolico do 'vimrc' deste repositorio para o seu home '~/.vimrc'
 ln -s $(pwd)/vimrc ~/.vimrc || exit
 
+mkdir ~/vim_bkp || exit
+
 # Instala todos os plugins utilizados, ignore os erros
 vim +:BundleClean +q +q && vim +:BundleInstall +q +q
 
