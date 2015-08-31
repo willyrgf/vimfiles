@@ -151,6 +151,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 "Latex
 Bundle 'lervag/vim-latex'
+"Vim-Shebang
+Bundle 'vim-scripts/Shebang'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
@@ -164,7 +166,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Syntax color and color
 set background=dark
 colorscheme badwolf
-set cursorline          " highlight the line with the cursor
+
+" Set *.rules sh syntax highlighting
+au BufNewFile,BufRead *.rules set filetype=sh
 
 " Configuracoes para o gVim
 if has("gui_running")
