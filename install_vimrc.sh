@@ -5,7 +5,7 @@
 #
 
 # verifica se o vim esta instalado
-if [[ $(which vim) ]]; then
+if [[ ! $(which vim) ]]; then
   echo "Instale o vim, burro."
   exit 1
 fi
