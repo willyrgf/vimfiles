@@ -150,7 +150,7 @@ Bundle 'kien/ctrlp.vim'
 " procura funcoes no fonte
 Bundle 'tacahiroy/ctrlp-funky'
 "Latex
-Bundle 'lervag/vim-latex'
+Bundle 'vim-latex/vim-latex'
 "Vim-Shebang
 Bundle 'vim-scripts/Shebang'
 
