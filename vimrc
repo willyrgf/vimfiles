@@ -1,5 +1,8 @@
 "
 " Configuracoes globais
+" plugin filetype
+filetype plugin on
+
 " Desativa o modo de compatibilidade com o VI
 set nocompatible
 " Salva todos os arquivos em utf-8
@@ -149,10 +152,11 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'kien/ctrlp.vim'
 " procura funcoes no fonte
 Bundle 'tacahiroy/ctrlp-funky'
-"Latex
-Bundle 'vim-latex/vim-latex'
 "Vim-Shebang
 Bundle 'vim-scripts/Shebang'
+"Latex
+"Bundle 'vim-latex/vim-latex'
+Bundle 'LaTeX-Box-Team/LaTeX-Box'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
@@ -162,6 +166,11 @@ let g:airline#extensions#enable_branch#enabled = 1
 let g:airline#extensions#enable_syntastic#enabled = 1 
 " mostra as tabs
 let g:airline#extensions#tabline#enabled = 1 
+
+" Latex configuration
+let g:LatexBox_latexmk_preview_continuously = 1
+let g:LatexBox_quickfix = 2
+let g:LatexBox_latexmk_options = "-d"
 
 " Syntax color and color
 set background=dark
@@ -189,5 +198,5 @@ if has("gui_running")
   au GUIEnter * call Maximize_Window()
   au GUIEnter * set vb t_vb=
 
-  colorscheme solarized
+  "colorscheme solarized
 endif
