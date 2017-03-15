@@ -157,6 +157,7 @@ Bundle 'vim-scripts/Shebang'
 "Latex
 "Bundle 'vim-latex/vim-latex'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
+Bundle 'evanmiller/nginx-vim-syntax'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
@@ -178,6 +179,7 @@ colorscheme badwolf
 
 " Set *.rules sh syntax highlighting
 au BufNewFile,BufRead *.rules set filetype=sh
+au BufNewFile,BufRead nginx.conf set filetype=nginx
 
 " Configuracoes para o gVim
 if has("gui_running")
