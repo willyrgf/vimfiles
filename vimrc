@@ -157,7 +157,8 @@ Bundle 'vim-scripts/Shebang'
 "Latex
 "Bundle 'vim-latex/vim-latex'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
-Bundle 'evanmiller/nginx-vim-syntax'
+"Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'chr4/nginx'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
