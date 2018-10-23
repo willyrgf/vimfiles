@@ -159,6 +159,8 @@ Bundle 'vim-scripts/Shebang'
 Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'chr4/nginx'
+" OpenSIPS Highligths
+Plug 'willyrgf/vim-opensips'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
@@ -181,6 +183,8 @@ colorscheme badwolf
 " Set *.rules sh syntax highlighting
 au BufNewFile,BufRead *.rules set filetype=sh
 au BufNewFile,BufRead nginx.conf set filetype=nginx
+" OpenSIPS syntax highlights
+au BufNewFile,BufRead *opensips*.cfg,*.{os,osips,opensips} set filetype=opensips
 
 " Configuracoes para o gVim
 if has("gui_running")
