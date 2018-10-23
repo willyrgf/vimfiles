@@ -160,7 +160,7 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 "Bundle 'evanmiller/nginx-vim-syntax'
 Bundle 'chr4/nginx'
 " OpenSIPS Highligths
-Plug 'willyrgf/vim-opensips'
+Bundle 'willyrgf/vim-opensips'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
