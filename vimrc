@@ -161,6 +161,8 @@ Bundle 'LaTeX-Box-Team/LaTeX-Box'
 Bundle 'chr4/nginx'
 " OpenSIPS Highligths
 Bundle 'willyrgf/vim-opensips'
+" Vim-Go
+Bundle 'fatih/vim-go'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
