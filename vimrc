@@ -41,7 +41,7 @@ set noerrorbells
 " salva o arquivo quando manda o controle para outro aplicativo.
 set autowrite
 " quando a linha for maior que a tela, desabilita a quebra.
-set nowrap
+"set nowrap
 " desabilita backup automatico
 set nobackup
 " tamanho do history
@@ -163,6 +163,16 @@ Bundle 'chr4/nginx'
 Bundle 'willyrgf/vim-opensips'
 " Vim-Go
 Bundle 'fatih/vim-go'
+" the_silver_searcher
+Bundle 'rking/ag.vim'
+
+"AG
+let g:ag_prg="--vimgrep"
+let g:ag_working_path_mode="r"
+
+
+"ctrlp
+let g:ctrlp_working_path_mode = 'ra'
 
 " Variaveis dos plugins
 let g:airline#extensions#powerline_fonts#enabled = 1 
@@ -209,3 +219,32 @@ if has("gui_running")
 
   "colorscheme solarized
 endif
+
+" vim-go {
+    let g:go_fmt_command = "goimports"
+    let g:go_fmt_fail_silently = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_structs = 1
+    let g:go_highlight_generate_tags = 1
+    let g:go_highlight_extra_types = 1
+    let g:go_highlight_function_arguments = 1
+    let g:go_highlight_function_calls = 1
+    let g:go_highlight_variable_declarations = 1
+    let g:go_highlight_variable_assignments = 1
+    let g:go_auto_type_info = 1
+    let g:go_auto_sameids = 1
+    augroup VimGo
+        au!
+        au FileType go nmap <buffer> <leader>i <Plug>(go-info)
+        au FileType go nmap <buffer> <leader>gd <Plug>(go-def)
+        au FileType go nmap <buffer> <leader>t  <Plug>(go-test)
+        au FileType go nmap <buffer> <leader>gt <Plug>(go-coverage-toggle)
+        au FileType go nmap <buffer> <leader>d :GoDecls<CR>
+        au FileType go nmap <buffer> <leader>dr :GoDeclsDir<CR>
+    augroup END
+" }
