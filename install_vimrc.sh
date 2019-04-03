@@ -22,3 +22,7 @@ if ! vim +:PlugInstall +q +q && vim +:VimBootstrapUpdate +q +q; then
     exit 1
 fi
 
+if ! mkdir -p ~/.vim/backup/; then
+    echo "error on create vim backup directory"
+    exit 1
+fi
