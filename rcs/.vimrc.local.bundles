@@ -1,0 +1,6 @@
+" custom bundles
+" multiple cursors
+Plug 'terryma/vim-multiple-cursors'
+
+" colorschemes
+Plug 'morhetz/gruvbox'

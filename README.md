@@ -1,4 +1,5 @@
 vimfiles
 ========
 
-Arquivo de configuração, plugins e colorscheme pessoais do VIM.
+My vim custom configuration based on the [vim-bootstrap](https://github.com/avelino/vim-bootstrap).
+

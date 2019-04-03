@@ -1,0 +1,36 @@
+"" custom configurations
+
+" bundles configs
+"
+" Don't save hidden and unloaded buffers in sessions.
+set sessionoptions-=buffers
+
+" custom bundles configs
+let g:multi_cursor_use_default_mapping=0
+
+" Default mapping
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+" custom configs
+"
+" general
+set noswapfile
+
+" go
+au FileType go nmap <Leader>dh <Plug>(go-def)
+"vim-go requires Vim 7.4.2009 or Neovim 0.3.1, but you're using an older version.
+let g:go_version_warning = 0
+
+" backup
+set backup
+set backupdir=~/.vim/backup/
+set writebackup
+set backupcopy=yes
+au BufWritePre * let &bex = '_' . strftime("%y%m%d-%Hh%Mm%S")

@@ -1,27 +1,24 @@
-#!/bin/bash
-# @author Willy Romao
-# @version 1.0 02/2015
-# @email willyr.goncalves@gmail.com
-#
+#!/bin/sh
 
-# verifica se o vim esta instalado
-if [[ ! $(which vim) ]]; then
-  echo "Instale o vim, burro."
-  exit 1
+# https://github.com/willyrgf/vimfiles
+
+# pre-requisites
+needed="vim git ctags"
+for b in $(echo "${needed}" | xargs -n 1) ; do
+    if ! command -v "${b}" 2> /dev/null; then
+        echo "command ${b} is not found"
+        exit 1
+    fi
+done
+
+# copy vimrc's
+if ! cp -av rcs/.vimrc* ~/; then
+    echo "error on copy the vimrcs to home"
+    exit 1
 fi
 
-# Faz o clone do repositorio do vundle, o gerenciador de plugins
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-# Atualiza este repositorio.
-git pull
-
-# Cria o link simbolico do 'vimrc' deste repositorio para o seu home '~/.vimrc'
-ln -s $(pwd)/vimrc ~/.vimrc || exit
-
-mkdir ~/vim_bkp || exit
-
-# Instala todos os plugins utilizados, ignore os erros
-vim +:BundleClean +q +q && vim +:BundleInstall +q +q
-
+if ! vim +:PlugInstall +q +q && vim +:VimBootstrapUpdate +q +q; then
+    echo "error on install vim plugins"
+    exit 1
+fi
 
