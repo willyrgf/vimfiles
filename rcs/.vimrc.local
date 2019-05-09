@@ -25,8 +25,6 @@ set noswapfile
 
 " go
 au FileType go nmap <Leader>dh <Plug>(go-def)
-"vim-go requires Vim 7.4.2009 or Neovim 0.3.1, but you're using an older version.
-let g:go_version_warning = 0
 
 " backup
 set backup
@@ -34,3 +32,22 @@ set backupdir=~/.vim/backup/
 set writebackup
 set backupcopy=yes
 au BufWritePre * let &bex = '_' . strftime("%y%m%d-%Hh%Mm%S")
+
+"fix a bug in new vim regex engine
+set regexpengine=1
+
+"test if lazyredraw is fast
+set lazyredraw
+
+"try new colors
+set nocompatible " be iMproved, required
+filetype off " required
+" set Vim-specific sequences for RGB colors
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set background=dark
+colorscheme solarized8_flat
+let g:solarized_statusline = "flat"
+let g:airline_theme = 'solarized'

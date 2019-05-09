@@ -117,7 +117,8 @@ if filereadable(expand("~/.vimrc.local.bundles"))
 endif
 
 call plug#end()
-
+set nocompatible " be iMproved, required
+filetype off " required
 " Required:
 filetype plugin indent on
 

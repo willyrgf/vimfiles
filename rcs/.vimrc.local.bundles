@@ -2,5 +2,8 @@
 " multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 
-" colorschemes
-Plug 'morhetz/gruvbox'
+" try experiment vim-sensible
+Plug 'tpope/vim-sensible'
+
+" try some colorscheme
+Plug 'lifepillar/vim-solarized8'
