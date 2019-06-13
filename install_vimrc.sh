@@ -3,7 +3,7 @@
 # https://github.com/willyrgf/vimfiles
 
 # pre-requisites
-needed="vim git ctags"
+needed="vim git ctags curl make"
 for b in $(echo "${needed}" | xargs -n 1) ; do
     if ! command -v "${b}" 2> /dev/null; then
         echo "command ${b} is not found"
