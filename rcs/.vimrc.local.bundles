@@ -7,3 +7,9 @@ Plug 'tpope/vim-sensible'
 
 " try some colorscheme
 Plug 'lifepillar/vim-solarized8'
+Plug 'fatih/molokai'
+
+" https://github.com/neoclide/coc.nvim
+" Use release branch
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
