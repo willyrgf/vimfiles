@@ -17,6 +17,7 @@ if ! cp -av rcs/.vimrc* ~/; then
     exit 1
 fi
 
+mkdir -p ~/.vim
 # copy plugins_settings
 if ! cp -av plugins_settings/* ~/.vim/; then
     echo "error on copy the plugins_settings to ~/.vim/"
