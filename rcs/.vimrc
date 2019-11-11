@@ -79,7 +79,9 @@ Plug 'ludwig/split-manpage.vim'
 
 " go
 "" Go Lang Bundle
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+if v:version > 742
+    Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
+endif
 
 
 " html
