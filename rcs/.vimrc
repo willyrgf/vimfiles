@@ -631,7 +631,7 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 " For ruby refactory
-if has('nvim')
+if has('nvim') || v:version < 801
   runtime! macros/matchit.vim
 else
   packadd! matchit
