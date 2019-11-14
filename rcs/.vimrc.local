@@ -62,9 +62,4 @@ if v:version > 742
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-" remove plugin with version required is > vim8
-if v:version < 801
-    Plug 'fatih/vim-go', { 'on': [] }
-endif
-
 set background=dark

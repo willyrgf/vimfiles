@@ -14,3 +14,9 @@ if has("gui_running") || has("gui_macvim") || has("mac")
     " Use release branch
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
+
+" remove plugin with version required is > vim8
+if v:version < 801
+    Plug 'fatih/vim-go', { 'on': [] }
+endif
+
