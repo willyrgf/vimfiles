@@ -3,7 +3,7 @@
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
-let vimplug_exists=expand('~/./autoload/plug.vim')
+let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
 let g:vim_bootstrap_langs = "c,elixir,go,javascript,php,python,ruby,rust,typescript"
 let g:vim_bootstrap_editor = ""				" nvim or vim
