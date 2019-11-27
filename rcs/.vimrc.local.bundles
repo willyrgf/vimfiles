@@ -16,7 +16,7 @@ if v:version >= 800
 endif
 
 " remove plugin with version required is > vim8
-if v:version < 801
+if v:version < 800
     Plug 'fatih/vim-go', { 'on': [] }
 endif
 
