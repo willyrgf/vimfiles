@@ -9,12 +9,6 @@ Plug 'tpope/vim-sensible'
 "Plug 'lifepillar/vim-solarized8'
 "Plug 'fatih/molokai'
 
-if v:version >= 800
-    " https://github.com/neoclide/coc.nvim
-    " Use release branch
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-endif
-
 " remove plugin with version required is > vim8
 if v:version < 800
     Plug 'fatih/vim-go', { 'on': [] }
