@@ -6,13 +6,7 @@ OS="$(uname -s | tr 'A-Z' 'a-z')"
 
 _pre_install() {
     # pre-requisites
-    needed="vim git ctags curl make"
-
-    if [ "${OS}" == "freebsd" ]; then
-        needed="${needed} gmake"
-        cp -v /usr/bin/make /tmp/
-        cp -v /usr/local/bin/gmake /usr/bin/make
-    fi
+    needed="vim git curl"
 
     for b in $(echo "${needed}" | xargs -n 1) ; do
         if ! command -v "${b}" 2> /dev/null; then
@@ -43,9 +37,8 @@ _install() {
 }
 
 _post_install() {
-    if [ "${OS}" == "freebsd" ]; then
-        cp -v /tmp/make /usr/bin/make
-    fi
+    # noop
+    echo ""
 }
 
 _main() {
