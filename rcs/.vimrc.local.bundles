@@ -1,16 +1,19 @@
-" custom bundles
-" multiple cursors
+""" my custom bundles to vim-bootstrap focus on managing servers
+
+"" disable unnecessary plugins
+Plug 'scrooloose/nerdtree', { 'on': [] }
+Plug 'jistr/vim-nerdtree-tabs', { 'on': [] }
+Plug 'SirVer/ultisnips', { 'on': [] }
+
+"" add my custom plugins
+"" multiple cursors
 Plug 'terryma/vim-multiple-cursors'
 
 " try experiment vim-sensible
 Plug 'tpope/vim-sensible'
 
-"" try some colorscheme
-"Plug 'lifepillar/vim-solarized8'
-"Plug 'fatih/molokai'
+" asterisk syntax highlight
+Plug 'ipoddubny/asterisk-vim'
 
-" remove plugin with version required is > vim8
-if v:version < 800
-    Plug 'fatih/vim-go', { 'on': [] }
-endif
-
+" nginx syntax highlight
+Plug 'chr4/nginx.vim'
